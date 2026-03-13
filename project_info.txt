@@ -1,0 +1,23 @@
+FocusFlow - Project Explanation
+
+Workflow:
+1. Load tasks from localStorage on page load.
+2. Display tasks in a scrollable list with buttons for complete/edit/delete.
+3. User adds a new task -> added to tasks array -> saved to localStorage -> rendered.
+4. User clicks complete button -> toggle completed property -> update localStorage -> re-render.
+5. User clicks edit button -> modify task text -> update array -> save to localStorage -> re-render.
+6. User clicks delete button -> remove from array -> update localStorage -> re-render.
+7. User clicks Clear All button -> confirm -> empty tasks array -> update localStorage -> re-render.
+
+Concepts Used:
+1. DOM Manipulation: creating elements, updating innerHTML, toggling classes dynamically.
+2. Event Listeners: listening to clicks and keypress for add, edit, complete, delete, and clear all actions.
+3. Local Storage: persist tasks across sessions in the browser.
+4. Glassmorphism: modern UI style with semi-transparent, blurred background cards.
+5. Responsive design: media queries and flexible layouts for mobile, tablet, and desktop.
+6. Font Awesome icons: interactive icons for buttons and improved UX.
+7. Animations: slide-in for tasks, hover scaling effects for buttons.
+8. Data structures: using array of objects to store tasks with properties (text, completed).
+
+Workflow Summary:
+Load tasks -> Render tasks -> User adds/edits/completes/deletes -> Save updated tasks to localStorage -> Re-render updated list
