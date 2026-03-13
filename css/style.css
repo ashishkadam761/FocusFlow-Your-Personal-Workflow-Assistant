@@ -1,0 +1,89 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Container (glass card) */
+.container {
+    width: 400px;
+    padding: 30px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Title */
+.container h3,h1 { margin-bottom: 20px; }
+
+/* Input Section */
+.input-section { display: flex; justify-content: space-between; margin-bottom: 15px; }
+#task-input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+#add-task {
+    width: 50px; border:none; border-radius:5px;
+    background: rgba(255,255,255,0.3); color:white;
+    cursor:pointer; transition:0.3s;
+}
+#add-task:hover { background: rgba(255,255,255,0.6); }
+
+/* Controls */
+.controls {
+    display:flex; justify-content: space-between; margin-bottom: 15px;
+    font-size:14px; align-items: center;
+}
+#clear-all {
+    border:none; border-radius:5px;
+    background: rgba(255,255,255,0.3); color:white;
+    cursor:pointer; padding:5px 10px;
+    transition:0.3s;
+}
+#clear-all:hover { background: rgba(255,255,255,0.6); }
+
+/* Task List */
+#task-list { list-style:none; max-height: 300px; overflow-y:auto; padding-right:5px; }
+#task-list li {
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius:5px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    animation: slideIn 0.3s ease;
+}
+#task-list li.completed { text-decoration: line-through; color:#00ff9c; opacity:0.7; }
+
+/* Task Buttons */
+.task-btn { background:none; border:none; color:white; cursor:pointer; margin-left:5px; transition:0.2s; font-size:16px; }
+.task-btn:hover { transform: scale(1.2); color:#ff6b6b; }
+
+/* No tasks text */
+#no-tasks { margin-top:10px; font-style:italic; color:#ddd; }
+
+/* Slide-in animation */
+@keyframes slideIn {
+    0% { opacity:0; transform: translateX(-50px); }
+    100% { opacity:1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media screen and (max-width:480px) {
+    .container { width:90%; padding:20px; }
+    #task-input { width:70%; font-size:14px; }
+    #add-task { width:40px; font-size:16px; }
+}
